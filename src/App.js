@@ -21,6 +21,7 @@ function App () {
   const addFeedback = newFeedback => {
     newFeedback.id = uuidv4()
     console.log(newFeedback)
+    setFeedback([newFeedback, ...feedback])
   }
 
   return (
