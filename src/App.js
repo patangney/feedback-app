@@ -3,6 +3,7 @@ import Header from './components/Header'
 import FeedbackData from './data/FeedbackData'
 import FeedbackList from './components/FeedbackList'
 
+
 function App () {
   //eslint-disable-next-line
   const [feedback, setFeedback] = useState(FeedbackData)
@@ -10,7 +11,7 @@ function App () {
     <>
       <Header />
       <div className='container'>
-        <FeedbackList feedback={ feedback } />
+        <FeedbackList feedback={ feedback } />        
       </div>
     </>
   )
