@@ -19,7 +19,7 @@ function FeedbackList ({ feedback, handleDelete }) {
             exit={{ opacity: 0 }}
           >
             <FeedbackItem
-              key={item.id}
+              key={item.id }
               item={item}
               handleDelete={handleDelete}
             />
