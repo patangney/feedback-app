@@ -1,24 +1,18 @@
+import { useState } from 'react'
+import Header from './components/Header'
+import FeedbackData from './data/FeedbackData'
+import FeedbackList from './components/FeedbackList'
+
 function App () {
-  const title = 'Blog Post'
-  const body = 'This is a blog post'
-  const comments = [
-    { id: 1, text: 'test test 1' },
-    { id: 2, text: 'test test 2' },
-    { id: 3, text: 'test test 3' }
-  ]
+  //eslint-disable-next-line
+  const [feedback, setFeedback] = useState(FeedbackData)
   return (
-    <div className='container'>
-      <h1>{title.toLowerCase()}</h1>
-      <p>{body}</p>
-      <p>
-        Comments ({comments.length})
-        <ul>
-          {comments.map((comment, index) => (
-            <li key={index}>{comment.text}</li>
-          ))}
-        </ul>
-      </p>
-    </div>
+    <>
+      <Header />
+      <div className='container'>
+        <FeedbackList feedback={ feedback } />
+      </div>
+    </>
   )
 }
 
