@@ -10,6 +10,7 @@ import AboutIconLink from './components/navigation/AboutIconLink'
 function App () {
   return (
     <FeedbackProvider>
+      
       <Router>
         <Header />
         <div className='container'>

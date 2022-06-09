@@ -20,7 +20,7 @@ const headerStyles = {
 }
 
 Header.defaultProps = {
-    text: 'Feedback User Interface',
+    text: 'Feedback User Interface - HI SEAN',
     bgColor: 'rgba(0,0,0,0.4)',
     textColor: '#ff6a95'
 }

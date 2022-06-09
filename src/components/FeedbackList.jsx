@@ -5,13 +5,13 @@ import FeedbackContent from '../context/FeedbackContent'
 
 function FeedbackList () {
   //extract from feedback context using hook
-  const {feedback} = useContext(FeedbackContent)
-  if (!feedback || feedback.length === 0) {
+  const {feedback, isLoading} = useContext(FeedbackContent)
+  if (!isLoading && (!feedback || feedback.length === 0)) {
     return <p>No Feedback Yet</p>
   }
   console.log(feedback)
   //* Loop through items *//
-  return (
+  return isLoading ? <h3>Loading ...</h3> : (
     <div className='feedback-list'>
       <AnimatePresence>
         {feedback.map(item => (
@@ -29,7 +29,9 @@ function FeedbackList () {
         ))}
       </AnimatePresence>
     </div>
+
   )
+  
   // ** Non animated version */
   // return (
   //   <div className='feedback-list'>
