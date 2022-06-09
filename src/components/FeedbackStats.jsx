@@ -1,6 +1,10 @@
-import PropTypes from 'prop-types'
+import { useContext } from 'react'
+import FeedbackContent from '../context/FeedbackContent'
 
-function FeedbackStats ({ feedback }) {
+function FeedbackStats() {
+  //create a hook to useContext
+  const { feedback } = useContext(FeedbackContent)
+
   function roundToTwo (num) {
     return +(Math.round(num + 'e+2') + 'e-2')
   }
@@ -19,10 +23,6 @@ function FeedbackStats ({ feedback }) {
       </h4>
     </div>
   )
-}
-
-FeedbackStats.propTypes = {
-    feedback: PropTypes.array.isRequired
 }
 
 export default FeedbackStats
