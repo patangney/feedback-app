@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function FeedbackStats ({ feedback }) {
   function roundToTwo (num) {
     return +(Math.round(num + 'e+2') + 'e-2')
@@ -17,6 +19,10 @@ function FeedbackStats ({ feedback }) {
       </h4>
     </div>
   )
+}
+
+FeedbackStats.propTypes = {
+    feedback: PropTypes.array.isRequired
 }
 
 export default FeedbackStats
