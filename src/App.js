@@ -1,10 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import { useState } from 'react'
 import Header from './components/Header'
 import FeedbackData from './data/FeedbackData'
 import FeedbackList from './components/FeedbackList'
 import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
+import AboutPage from './pages/AboutPage';
 
 function App () {
   //eslint-disable-next-line
@@ -25,14 +27,14 @@ function App () {
   }
 
   return (
-    <>
+    <Router>
       <Header />
       <div className='container'>
         <FeedbackForm  handleAdd={addFeedback}/>
         <FeedbackStats feedback={feedback} />
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
       </div>
-    </>
+    </Router>
   )
 }
 
