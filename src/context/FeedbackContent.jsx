@@ -45,6 +45,12 @@ export const FeedbackProvider = ({ children }) => {
     }
   }
 
+  //** Update Feedback Item */
+  const updateFeedback = (id, updatedItem) => {
+    console.log(id, updatedItem);
+
+  }
+
   //** Add Feedback */
   const addFeedback = newFeedback => {
     newFeedback.id = uuidv4()
