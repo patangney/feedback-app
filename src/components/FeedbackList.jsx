@@ -32,15 +32,6 @@ function FeedbackList () {
     </div>
 
   )
-  
-  // ** Non animated version */
-  // return (
-  //   <div className='feedback-list'>
-  //     {feedback.map(item => (
-  //       <FeedbackItem key={item.id} item={item} handleDelete={handleDelete} /> //** handleDelete - pass to Feedback Item props */
-  //     ))}
-  //   </div>
-  // )
 }
 
 
