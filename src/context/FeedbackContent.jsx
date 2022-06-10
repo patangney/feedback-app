@@ -3,6 +3,8 @@ import { createContext, useState, useEffect } from 'react'
 
 const FeedbackContent = createContext()
 
+//**TODO add firebase to project */
+
 export const FeedbackProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true)
   const [feedback, setFeedback] = useState([])
